@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:26.09-py3
+# NVIDIA's PyTorch container (26.09: CUDA 13.4, PyTorch 2.14, initial Rubin support) is
+# published as a multi-arch image; Apptainer pulls the arm64 (SBSA) manifest when built on
+# an aarch64 host such as the Vera-based test node. It ships CUDA, cuDNN, NCCL and a
+# PyTorch build for the host architecture, so nothing in this repo needs compiling.
+#
+# Build (on the ARM test node or any aarch64 box with Apptainer):
+#   apptainer build env/huang-arm64.sif env/huang-arm64.def
+# Then every sbatch script in slurm/ runs inside it via slurm/env.sh (Option A).
+
+%post
+    pip install --no-cache-dir \
+        "transformers>=4.45" "accelerate>=1.0" "peft>=0.13" "torch_geometric>=2.6" "sbi>=0.23" pytest
+    # vLLM for the extraction pass. If no aarch64 wheel matches the container's torch,
+    # llm/extract_sharded.py --engine hf uses the Hugging Face generate loop instead.
+    pip install --no-cache-dir vllm || echo "vllm not installed; --engine hf still works"
+
+%environment
+    export PYTHONUNBUFFERED=1
+    export TOKENIZERS_PARALLELISM=false
+
+%test
+    python -c "import platform, torch; print(platform.machine(), torch.__version__, torch.cuda.is_available())"

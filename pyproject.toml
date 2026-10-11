@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "huangtests"
+version = "0.1.0"
+description = "Multi-GPU test code for the Huang Complex Supercomputing Seed Fund application"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "BSD-3-Clause" }
+dependencies = ["torch>=2.4"]
+
+[project.optional-dependencies]
+omics = ["transformers>=4.45", "accelerate>=1.0", "torch_geometric>=2.6"]
+llm = ["transformers>=4.45", "accelerate>=1.0", "peft>=0.13"]
+sbi = ["sbi>=0.23"]
+test = ["pytest>=8"]
+all = ["huangtests[omics,llm,sbi,test]"]
+
+[tool.setuptools]
+packages = ["huangtests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

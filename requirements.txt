@@ -1,0 +1,10 @@
+# Full environment for GPU runs. On the Huang Complex (aarch64 + Rubin GPUs) install torch
+# from the Supercomputer Center's recommended image or the aarch64 CUDA wheels first, then:
+#   pip install -r requirements.txt
+torch>=2.4
+transformers>=4.45
+accelerate>=1.0
+peft>=0.13
+torch_geometric>=2.6
+sbi>=0.23
+pytest>=8

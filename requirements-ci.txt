@@ -1,0 +1,8 @@
+# CPU-only environment used by GitHub Actions (x86_64 and arm64 runners).
+# torch is installed separately from the CPU wheel index in .github/workflows/ci.yml.
+transformers>=4.45
+accelerate>=1.0
+peft>=0.13
+torch_geometric>=2.6
+sbi>=0.23
+pytest>=8

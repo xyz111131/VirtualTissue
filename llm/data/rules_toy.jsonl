@@ -1,0 +1,24 @@
+{"sentence": "Interleukin-4 released by Th2 cells drives tumor-associated macrophages toward an alternatively activated state that secretes epidermal growth factor.", "rule": "macrophage, IL-4, increases, EGF secretion"}
+{"sentence": "Epidermal growth factor from macrophages stimulates the migration of mammary carcinoma cells toward blood vessels.", "rule": "tumor cell, EGF, increases, migration speed"}
+{"sentence": "Tumor cells exposed to EGF increase their proliferation rate.", "rule": "tumor cell, EGF, increases, cycle entry"}
+{"sentence": "CSF-1 produced by tumor cells supports the survival of macrophages in the tumor bed.", "rule": "macrophage, CSF-1, decreases, apoptosis"}
+{"sentence": "Blockade of CSF1R depletes tumor-associated macrophages by inducing their death.", "rule": "macrophage, CSF1R inhibitor, increases, apoptosis"}
+{"sentence": "TGF-beta secreted by cancer-associated fibroblasts suppresses the proliferation of CD8+ T cells.", "rule": "CD8 T cell, TGF-beta, decreases, cycle entry"}
+{"sentence": "PD-L1 expressed on tumor cells engages PD-1 and blunts the cytotoxic activity of CD8+ T cells.", "rule": "CD8 T cell, PD-L1, decreases, attack rate"}
+{"sentence": "Interferon-gamma from CD8+ T cells induces PD-L1 expression in carcinoma cells.", "rule": "tumor cell, IFN-gamma, increases, PD-L1 expression"}
+{"sentence": "Hypoxic tumor cells secrete VEGF to recruit new vessels.", "rule": "tumor cell, oxygen, decreases, VEGF secretion"}
+{"sentence": "Under low oxygen, tumor cell proliferation slows markedly.", "rule": "tumor cell, oxygen, increases, cycle entry"}
+{"sentence": "IL-6 from inflammatory cancer-associated fibroblasts promotes tumor cell proliferation.", "rule": "tumor cell, IL-6, increases, cycle entry"}
+{"sentence": "CXCL12 produced by myofibroblastic CAFs attracts tumor cells up the chemokine gradient.", "rule": "tumor cell, CXCL12, increases, chemotaxis"}
+{"sentence": "IL-10 secreted by M2-like macrophages dampens the killing activity of CD8+ T cells.", "rule": "CD8 T cell, IL-10, decreases, attack rate"}
+{"sentence": "After antigen recognition, contact with tumor cells increases CD8+ T cell proliferation.", "rule": "CD8 T cell, contact with tumor cell, increases, cycle entry"}
+{"sentence": "Debris released by dying tumor cells recruits macrophages to the necrotic core.", "rule": "macrophage, debris, increases, chemotaxis"}
+{"sentence": "IL-4 reduces nitric oxide production in macrophages.", "rule": "macrophage, IL-4, decreases, NO secretion"}
+{"sentence": "Interferon-gamma pushes macrophages toward a pro-inflammatory, TNF-secreting state.", "rule": "macrophage, IFN-gamma, increases, TNF secretion"}
+{"sentence": "TNF released by M1-like macrophages triggers apoptosis of tumor cells.", "rule": "tumor cell, TNF, increases, apoptosis"}
+{"sentence": "TGF-beta converts resting fibroblasts into contractile myofibroblasts.", "rule": "fibroblast, TGF-beta, increases, transformation to myCAF"}
+{"sentence": "Sustained PD-L1 signalling reduces the migration of T cells into the tumor nest.", "rule": "CD8 T cell, PD-L1, decreases, migration speed"}
+{"sentence": "Lactate accumulating in the tumor core polarizes macrophages toward an M2-like state.", "rule": "macrophage, lactate, increases, M2 polarization"}
+{"sentence": "Th2 cells are recruited by CCL17 produced by M2-like macrophages.", "rule": "Th2 cell, CCL17, increases, chemotaxis"}
+{"sentence": "Anti-PD-1 antibodies restore the killing capacity of exhausted CD8+ T cells.", "rule": "CD8 T cell, anti-PD-1, increases, attack rate"}
+{"sentence": "Fibroblasts stimulated by PDGF proliferate and deposit collagen.", "rule": "fibroblast, PDGF, increases, cycle entry"}
