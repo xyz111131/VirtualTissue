@@ -1,14 +1,14 @@
-# Multi-GPU test code — Huang Complex Supercomputing Seed Fund
+# Multi-GPU test code for virtual tissue
 
-[![CPU smoke tests (x86_64 + arm64)](https://github.com/OWNER/huang-seedfund-gpu-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/huang-seedfund-gpu-tests/actions/workflows/ci.yml)
+[![CPU smoke tests (x86_64 + arm64)](https://github.com/xyz111131/VirtualTissue/actions/workflows/ci.yml/badge.svg)](https://github.com/xyz111131/VirtualTissue/actions/workflows/ci.yml)
 
 Small, runnable scripts showing how each GPU workload in our proposal
 (*Sec. 4.3b, compute table*) will use several Rubin GPUs in parallel on the Huang Complex.
 Every script runs in minutes on toy data, so it can be launched as-is on the ARM test node
 or an NVL72 rack to check the software stack before the real data and models go in.
-The same code runs on CPUs (gloo backend) — that is what the CI does on x86_64 **and arm64**.
+The same code runs on CPUs (gloo backend) on x86_64 **and arm64**.
 
-## What is parallelised, and how
+## Steps with parallelization
 
 | Proposal row (Sec. 4.3b) | Script | Parallel pattern | Launcher |
 |---|---|---|---|
@@ -22,7 +22,7 @@ The same code runs on CPUs (gloo backend) — that is what the CI does on x86_64
 
 The ABM ensemble itself (PhysiCell, 2–4 × 10⁵ runs) is CPU-only on the Vera cores and is
 not part of this repository; `npe/simulate.py` is a toy stand-in whose output format
-(`theta`, `x` tensors) is what the PhysiCell→SBI bridge writes.
+(parameters `theta`, summary statistics `x` tensors) is what the PhysiCell→SBI bridge writes.
 
 Two launch patterns cover everything:
 
