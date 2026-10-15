@@ -1,7 +1,5 @@
 # Multi-GPU test code for virtual tissue
 
-[![CPU smoke tests (x86_64 + arm64)](https://github.com/xyz111131/VirtualTissue/actions/workflows/ci.yml/badge.svg)](https://github.com/xyz111131/VirtualTissue/actions/workflows/ci.yml)
-
 Small, runnable scripts showing how each GPU workload in our proposal
 (*Sec. 4.3b, compute table*) will use several Rubin GPUs in parallel on the Huang Complex.
 Every script runs in minutes on toy data, so it can be launched as-is on the ARM test node
